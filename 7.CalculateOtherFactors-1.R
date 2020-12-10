@@ -1,7 +1,7 @@
 # Step 5
 #************************************************************#
-#*  Calculate the other important factors in assessing
-#*  the hospitals capacity
+#*  Calculate the total beds and total available beds as they 
+#*  are important factors in assessing the hospitals capacity
 #************************************************************#
 
 total_beds1 = round(bahrain$hospital_beds_per_thousand[1]*bahrain$population[1]/1000,0) 

@@ -1,6 +1,8 @@
 # Step 6
 #******************************************************************#
-#*  Using the reported number of active cases and those receiving 
+#*  Calculate the hospitalization rate available as it is
+#*  an important factor in assessing the hospitals capacity
+#************************************************************# Using the reported number of active cases and those receiving 
 #*  treatments, the hospitalization rate was estimated simply as 
 #*  the ratio of the treated cased to active cases. Afterwards,
 #*  the number of the predicted hospitalized cases was estimated.
@@ -21,4 +23,8 @@ grid( )
 plot(Projected_DayCounter,hospitalized_cases,pch=20,col="red", xlab="Projected Time (3 months)",ylab="Projected Hospitalized COVID-19 Cases")
 grid( )
 text(180,1400,paste("Available Beds",total_available_beds),col="red")
+
+#*suggestion:
+#*combine them in one graph if possible
+
 
