@@ -1,6 +1,10 @@
 # UOB - BDSA 601 (Research Methods) - Project
 BDSA 601 - RM Project (in R)
 
+# Prepared By
+* Aisha Khalid
+* Ahmed Khedr
+
 # COVID-19 Logistic Growth Model Estimation
 This project estimates the growth of COVID-19 cases in the Kingdom of Bahrain using the Logistic Growth Model.
 <br/>
