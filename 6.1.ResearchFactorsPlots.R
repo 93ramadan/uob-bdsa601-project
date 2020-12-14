@@ -29,7 +29,36 @@ plot(ProjectedDayCounter,
 grid()
 
 #************************************************************#
-#*  Display Combined Plots
+#*  Display Combined Plots (Hospitalized Cases & Available Beds)
+#************************************************************#
+
+# Increase the Y-axis to occupy Hospitalized Cases vs. Available Beds
+ProjectionCases_Y_AxisLimit= c(Factors.Projected.HospitalizedCases, Factors.Projected.AvailableBeds)
+
+# Prepare plot area for one plot
+par(mfrow=c(1,1))
+
+# Plot Projected Hospitalized Cases
+plot(ProjectedDayCounter,
+     Factors.Projected.HospitalizedCases,
+     pch = 20, col = "red",
+     ylim = range(ProjectionCases_Y_AxisLimit),
+     xlab = "Projected Time (3 months)", ylab = "COVID-19 Cases/Available Beds")
+
+# Add Projected Available Beds (Available Beds - Hospitalized Cases)
+points(ProjectedDayCounter,
+       Factors.Projected.AvailableBeds,
+       pch = 20, col = "purple")
+# Add Grid Lines to Plot
+grid()
+
+# Add Legend to Plot
+legend("center",
+       fill = c("red" ,"purple"),
+       c("Hospitalized Cases","Available Beds"))
+
+#************************************************************#
+#*  Display Combined Plots (Total Cases & Hospitalized Cases & Available Beds)
 #************************************************************#
 
 # Increase the Y-axis to occupy Projected Cases vs. Hospitalized Cases
