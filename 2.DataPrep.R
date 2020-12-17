@@ -3,6 +3,9 @@
 #************************************************************#
 bahrain$date_asdate = as.Date(bahrain$date, "%m/%d/%Y")
 
+bahrain_forward$date_asdate = as.Date(bahrain_forward$date, "%d-%m-%y")
+bahrain_forward$day = seq.int(nrow(bahrain_forward))
+
 #************************************************************#
 #*  Remove days which have no registered total cases
 #************************************************************#

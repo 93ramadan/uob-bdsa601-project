@@ -23,6 +23,10 @@ lines(dayCounter,
 # Add Model Projection Data
 lines(ProjectedDayCounter, ProjectedTotalCases, col = "red", lwd = 2)
 
+# Present actual data for projected period - extra - not required
+# lines(ProjectedDayCounter, bahrain_forward[ProjectedDayCounter,]$total_cases, col = "purple", lwd = 2)
+# plot(total_cases ~ day, data = bahrain_forward, pch = 16, col = "darkgrey", main = "Actual Data ", xlab = "Days", ylab = "Total Cases")
+
 # Add Grid Lines to Plot
 grid()
 
