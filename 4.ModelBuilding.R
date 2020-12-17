@@ -29,3 +29,7 @@ for (CoefficientName in names(LogisticGrowthModel.CoEf)) {
 DailyGrowthRate = (1/LogisticGrowthModel.CoEf[3])
 DailyGrowthRate.Rounded = round(DailyGrowthRate, 3)
 print(paste("Based on the generated logistic growth model, the Daily Growth Rate of cases is", DailyGrowthRate.Rounded))
+
+# Calculate Training MSE
+TrainingPrediction = LogisticGrowthModel.CoEf[1] / (1+exp(-(TCTDperDay$day-LogisticGrowthModel.CoEf[2])/LogisticGrowthModel.CoEf[3]))
+TrainingMSE = mean((TCTDperDay$total_cases - TrainingPrediction)^2)
