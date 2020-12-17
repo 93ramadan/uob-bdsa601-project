@@ -33,3 +33,4 @@ print(paste("Based on the generated logistic growth model, the Daily Growth Rate
 # Calculate Training MSE
 TrainingPrediction = LogisticGrowthModel.CoEf[1] / (1+exp(-(TCTDperDay$day-LogisticGrowthModel.CoEf[2])/LogisticGrowthModel.CoEf[3]))
 TrainingMSE = mean((TCTDperDay$total_cases - TrainingPrediction)^2)
+print(paste("Based on the generated logistic growth model, the Training MSE is", TrainingMSE))
