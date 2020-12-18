@@ -2,6 +2,7 @@
 #*  Display Factor Figures & Plots
 #************************************************************#
 
+print(paste("The current hospitalization rate is =", round(Factors.Current.HospitalizationRate ,2)))
 print(paste("The total beds in the Kingdom of Bahrain are =", Factors.Overall.TotalBeds))
 print(paste("The available beds in the Kingdom of Bahrain are =", Factors.Overall.AvailableBeds))
 
@@ -15,7 +16,7 @@ par(mfrow=c(1,3))
 # Plot Projected Total Cases
 plot(ProjectedDayCounter,
      ProjectedTotalCases,
-     pch = 20, col = "blue",
+     pch = 19, col = "blue",
      xlab = "Projected Time (3 months)", ylab = "Projected COVID-19 Cases")
 # Add Grid Lines to Plot
 grid()
@@ -23,7 +24,7 @@ grid()
 # Plot Projected Hospitalized Cases
 plot(ProjectedDayCounter,
      Factors.Projected.HospitalizedCases,
-     pch = 20, col = "red",
+     pch = 19, col = "red",
      xlab = "Projected Time (3 months)", ylab = "Projected Hospitalized COVID-19 Cases")
 # Add Grid Lines to Plot
 grid()
@@ -31,7 +32,7 @@ grid()
 # Plot Available Beds
 plot(ProjectedDayCounter,
      Factors.Projected.AvailableBeds,
-     pch = 20, col = "purple",
+     pch = 19, col = "purple",
      xlab = "Projected Time (3 months)", ylab = "Projected Available Beds")
 # Add Grid Lines to Plot
 grid()

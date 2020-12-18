@@ -25,6 +25,9 @@ for (CoefficientName in names(LogisticGrowthModel.CoEf)) {
   print(paste("The coefficient of", CoefficientName, "is equal to =", round(LogisticGrowthModel.CoEf[CoefficientName], 3)))
 }
 
+# Display Maximum (Upper-Limit)
+print(paste("Based on the generated logistic growth model, the maximum number of cases that will be reached is", round(LogisticGrowthModel.CoEf["phi1"], 0)))
+
 # Calculate Daily Growth Rate
 DailyGrowthRate = (1/LogisticGrowthModel.CoEf[3])
 DailyGrowthRate.Rounded = round(DailyGrowthRate, 3)
@@ -33,4 +36,4 @@ print(paste("Based on the generated logistic growth model, the Daily Growth Rate
 # Calculate Training MSE
 TrainingPrediction = LogisticGrowthModel.CoEf[1] / (1+exp(-(TCTDperDay$day-LogisticGrowthModel.CoEf[2])/LogisticGrowthModel.CoEf[3]))
 TrainingMSE = mean((TCTDperDay$total_cases - TrainingPrediction)^2)
-print(paste("Based on the generated logistic growth model, the Training MSE is", TrainingMSE))
+print(paste("Based on the generated logistic growth model, the Training MSE is", round(TrainingMSE, 2)))
