@@ -1,6 +1,9 @@
 # UOB - BDSA 601 (Research Methods) - Project
 BDSA 601 - RM Project (in R)
 
+# Supervised By
+* Dr. Sawsan Hilal
+
 # Prepared By
 * Aisha Khalid
 * Ahmed Khedr
